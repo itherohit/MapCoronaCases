@@ -1,0 +1,59 @@
+<%- include('partials/header') -%>
+    <section class="index">
+        <nav class="Nav-bar">
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <div class="nav-bar-logo">
+                <h5>MapCoronaCases</h5>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/">World</a></li>
+                <li><a href="/india">India</a></li>
+                <li><a href="/covid19">Covid-19</a></li>
+                <li><a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/donate" target="blank">Donate</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Coffee?</a></li>
+            </ul>
+        </nav>
+        <div class="search-section">
+            <div class="search">
+                <div class="search-input">
+                    <input type="text" name="" id="searchInput" placeholder="Country Name">
+                    <button class="search-icon"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="search-drop">
+                    <button class="search-drop-btn"><i class='fas fa-caret-down'></i></button>
+                </div>
+            </div>
+            <div class="countries-section animate__animated">
+                <% data_json.forEach(data => { %>
+                    <div class="country-info">
+                        <div class="country-name">
+                            <img class="country-name-img" src="<%=data.img %>" width="50px" height="50px">
+                            <h6 class="country-name-header">
+                                <%= data.country %>
+                            </h6>
+                        </div>
+                        <div class="country-details ">
+                            <div class="total country-info-icon ">
+                                <p><i class="fas fa-virus "></i>
+                                    <%= data.cases %>
+                                </p>
+                            </div>
+                            <div class="recovered country-info-icon ">
+                                <p><i class="fas fa-heartbeat "></i> <span class="green "><%= data.recovered %></span></p>
+                            </div>
+                            <div class="death country-info-icon ">
+                                <p><i class="fas fa-skull "></i> <span class="red "><%= data.deaths %></span></p>
+                            </div>
+                        </div>
+                        <hr class="btm-line ">
+                    </div>
+                    <% }); %>
+            </div>
+        </div>
+    </section>
+    <%- include('partials/footer') -%>

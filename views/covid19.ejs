@@ -1,0 +1,139 @@
+<%- include('partials/header') -%>
+    <nav class="Nav-bar">
+        <div class="hamburger">
+            <div class="line black"></div>
+            <div class="line black"></div>
+            <div class="line black"></div>
+        </div>
+        <div class="nav-bar-logo">
+            <h5>MapCoronaCases</h5>
+        </div>
+        <ul class="nav-links nav-black">
+            <li><a href="/">World</a></li>
+            <li><a href="/india">India</a></li>
+            <li><a href="/covid19">Covid-19</a></li>
+            <li><a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/donate" target="blank">Donate</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Coffee?</a></li>
+        </ul>
+    </nav>
+    <div class="container covid-sec">
+        <div class="row">
+            <div class="col-lg-6 col-sm-12 covid-left-sec">
+                <div>
+                    <h1 class="covid-sec-header">Covid-19</h1>
+                    <div class="covid-sec-info">
+                        <p>Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus. Most people infected with the COVID-19 virus will experience mild to moderate respiratory illness and recover without requiring special
+                            treatment. Older people, and those with underlying medical problems like cardiovascular disease, diabetes, chronic respiratory disease, and cancer are more likely to develop serious illness. Protect yourself and others from
+                            infection by washing your hands or using an alcohol based rub frequently and not touching your face. </p>
+                    </div>
+                    <div class="more-info">
+                        <a href="https://www.who.int/health-topics/coronavirus#tab=tab_1" target="blank">More Info</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-sm-12 covid-right-sec">
+                <img class="covid-sec-img" src="images/covid19.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="symptoms">
+        <h1>Symptoms</h1>
+    </div>
+    <section class="animate__animated symptom" id="symptoms1">
+        <div class="row">
+            <div class="col-lg-4 col-sm-12  symptom-col">
+                <img src="images/cough.jpg" alt="">
+                <h3>Cough.</h3>
+            </div>
+            <div class="col-lg-4 col-sm-12 symptom-col">
+                <img src="images/fever.jpg" alt="">
+                <h3>Fever</h3>
+            </div>
+            <div class="col-lg-4 col-sm-12 symptom-col">
+                <img src="images/breathe.jpg" alt="">
+                <h3>Breathe problems</h3>
+            </div>
+        </div>
+    </section>
+    <section class="animate__animated symptom" id="symptoms2">
+        <div class="row">
+            <div class="col-lg-4 symptom-col">
+                <img src="images/nose.jpg" alt="">
+                <h3>Running Nose</h3>
+            </div>
+            <div class="col-lg-4 symptom-col">
+                <img src="images/headache.jpg" alt="">
+                <h3>Headache</h3>
+            </div>
+            <div class="col-lg-4 symptom-col">
+                <img src="images/weak.jpg" alt="">
+                <h3>Feeling Weak</h3>
+            </div>
+        </div>
+    </section>
+    <div class="symptoms">
+        <h1>Preventions</h1>
+    </div>
+    <section class="animate__animated symptom" id="transmission">
+        <div class="row">
+            <div class="col-lg-4 col-sm-12  symptom-col">
+                <img src="images/wash.jpg" alt="">
+                <h3>Wash your Hands</h3>
+            </div>
+            <div class="col-lg-4 col-sm-12 symptom-col">
+                <img src="images/home.jpg" alt="">
+                <h3>Stay Home</h3>
+            </div>
+            <div class="col-lg-4 col-sm-12 symptom-col">
+                <img src="images/mask.jpg" alt="">
+                <h3>Wear Mask if you are Sick</h3>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-4 col-sm-12  symptom-col">
+                <img src="images/sneeze.jpg" alt="">
+                <h3>Cover your Mouth while Sneezing</h3>
+            </div>
+            <div class="col-lg-4 col-sm-12 symptom-col">
+                <img src="images/distance.jpg" alt="">
+                <h3>Maintain Social Distance</h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="animate__animated cases-info" id="transmission">
+        <div class="row">
+            <div class="col-lg-4 col-sm-12  symptom-col">
+                <h1><i class="fas fa-virus "></i></h1>
+                <h3>
+                    <%= data.cases %>
+                </h3>
+                <p>Total Cases</p>
+            </div>
+            <div class="col-lg-4 col-sm-12 symptom-col">
+                <h1><i class="fas fa-heartbeat "></i></h1>
+                <h3>
+                    <%= data.deaths %>
+                </h3>
+                <p>Recoverd</p>
+            </div>
+            <div class="col-lg-4 col-sm-12 symptom-col">
+                <h1><i class="fas fa-skull "></i> </h1>
+                <h3>
+                    <%= data.recovered %>
+                </h3>
+                <p>Deaths</p>
+            </div>
+        </div>
+    </section>
+    <div class="donate-link">
+        <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/donate" target="blank">Donate</a>
+    </div>
+    <div class="info-rights">
+        <p>All Informations taken from <a href="https://www.who.int" target="blank">WHO</a> and
+            <a href="https://www.worldometers.info/coronavirus/" target="blank">Worldometers.</a>
+        </p>
+    </div>
+
+    <%- include('partials/footer') -%>
