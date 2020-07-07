@@ -1,3 +1,92 @@
+// var map;
+// function initMap() {
+//     console.log("jijiji");
+//     map = new google.maps.Map(document.querySelector("#map"), {
+//     center: { lat: -34.397, lng: 150.644 },
+//     zoom: 8,
+//     styles: [
+//             {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
+//             {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
+//             {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
+//             {
+//               featureType: 'administrative.locality',
+//               elementType: 'labels.text.fill',
+//               stylers: [{color: '#d59563'}]
+//             },
+//             {
+//               featureType: 'poi',
+//               elementType: 'labels.text.fill',
+//               stylers: [{color: '#d59563'}]
+//             },
+//             {
+//               featureType: 'poi.park',
+//               elementType: 'geometry',
+//               stylers: [{color: '#263c3f'}]
+//             },
+//             {
+//               featureType: 'poi.park',
+//               elementType: 'labels.text.fill',
+//               stylers: [{color: '#6b9a76'}]
+//             },
+//             {
+//               featureType: 'road',
+//               elementType: 'geometry',
+//               stylers: [{color: '#38414e'}]
+//             },
+//             {
+//               featureType: 'road',
+//               elementType: 'geometry.stroke',
+//               stylers: [{color: '#212a37'}]
+//             },
+//             {
+//               featureType: 'road',
+//               elementType: 'labels.text.fill',
+//               stylers: [{color: '#9ca5b3'}]
+//             },
+//             {
+//               featureType: 'road.highway',
+//               elementType: 'geometry',
+//               stylers: [{color: '#746855'}]
+//             },
+//             {
+//               featureType: 'road.highway',
+//               elementType: 'geometry.stroke',
+//               stylers: [{color: '#1f2835'}]
+//             },
+//             {
+//               featureType: 'road.highway',
+//               elementType: 'labels.text.fill',
+//               stylers: [{color: '#f3d19c'}]
+//             },
+//             {
+//               featureType: 'transit',
+//               elementType: 'geometry',
+//               stylers: [{color: '#2f3948'}]
+//             },
+//             {
+//               featureType: 'transit.station',
+//               elementType: 'labels.text.fill',
+//               stylers: [{color: '#d59563'}]
+//             },
+//             {
+//               featureType: 'water',
+//               elementType: 'geometry',
+//               stylers: [{color: '#17263c'}]
+//             },
+//             {
+//               featureType: 'water',
+//               elementType: 'labels.text.fill',
+//               stylers: [{color: '#515c6d'}]
+//             },
+//             {
+//               featureType: 'water',
+//               elementType: 'labels.text.stroke',
+//               stylers: [{color: '#17263c'}]
+//             }
+//           ]
+//   });
+// }
+
 const dropBtn = document.querySelector("div.search-drop");
 const dropCountry = document.querySelector("div.countries-section");
 
@@ -38,8 +127,16 @@ window.onscroll = () => {
     const transmission = document.querySelector('#transmission')
     const line = document.querySelectorAll('.line');
     const navBar = document.querySelector('.Nav-bar');
-    if (window.scrollY >= 10)
-        symptoms1.classList.add('animate__fadeInUp');
+    if (symptoms1) {
+        if (window.scrollY >= 10)
+            symptoms1.classList.add('animate__fadeInUp');
+        if (window.scrollY >= 400) {
+            symptoms2.classList.add('animate__fadeInUp');
+        }
+        if (window.scrollY >= 800) {
+            transmission.classList.add('animate__fadeInUp');
+        }
+    }
     if (window.scrollY >= 30) {
         navBar.classList.add('nav-bg');
         navLinks.classList.remove('nav-black');
@@ -54,10 +151,5 @@ window.onscroll = () => {
             line[i].classList.add('black');
         }
     }
-    if (window.scrollY >= 400) {
-        symptoms2.classList.add('animate__fadeInUp');
-    }
-    if (window.scrollY >= 800) {
-        transmission.classList.add('animate__fadeInUp');
-    }
+
 }

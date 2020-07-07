@@ -14,7 +14,7 @@
                 <li><a href="/india">India</a></li>
                 <li><a href="/covid19">Covid-19</a></li>
                 <li><a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/donate" target="blank">Donate</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="/about">About</a></li>
                 <li><a href="#">Coffee?</a></li>
             </ul>
         </nav>
@@ -40,14 +40,14 @@
                         <div class="country-details ">
                             <div class="total country-info-icon ">
                                 <p><i class="fas fa-virus "></i>
-                                    <%= data.cases %>
+                                    <%= data.fcases %>
                                 </p>
                             </div>
                             <div class="recovered country-info-icon ">
-                                <p><i class="fas fa-heartbeat "></i> <span class="green "><%= data.recovered %></span></p>
+                                <p><i class="fas fa-heartbeat "></i> <span class="green "><%= data.frecovered %></span></p>
                             </div>
                             <div class="death country-info-icon ">
-                                <p><i class="fas fa-skull "></i> <span class="red "><%= data.deaths %></span></p>
+                                <p><i class="fas fa-skull "></i> <span class="red "><%= data.fdeaths %></span></p>
                             </div>
                         </div>
                         <hr class="btm-line ">
@@ -56,4 +56,40 @@
             </div>
         </div>
     </section>
-    <%- include('partials/footer') -%>
+    <div id="map"></div>
+    <% if(geo_json) { %>
+        <script>
+            var geojson = <%- geo_json %>;
+            console.log(geojson);
+            mapboxgl.accessToken = 'pk.eyJ1IjoiaXRoZXJvaGl0IiwiYSI6ImNrYzllc2ZmZzFpNWQydHFwMXB0N3RtdjEifQ.H-Hd-UbdejRR_JxGReNzFQ';
+            var map = new mapboxgl.Map({
+                container: 'map',
+                zoom: 2,
+                style: 'mapbox://styles/itherohit/ckc9xkk9q0aiw1jqcgwwltxnk'
+            });
+
+            // geojson.features.forEach(marker => {
+            //     new mapboxgl.Marker()
+            //         .setLngLat([-75.06162, 43.282537])
+            //         .addTo(map);
+            // });
+
+            map.on('load', function() {
+                map.addSource('points', {
+                    'type': 'geojson',
+                    'data': geojson
+                });
+                map.addLayer({
+                    'id': 'park-volcanoes',
+                    'type': 'circle',
+                    'source': 'points',
+                    'paint': {
+                        'circle-radius': 6,
+                        'circle-color': '#B42222'
+                    },
+                    'filter': ['==', '$type', 'Point']
+                });
+            });
+        </script>
+        <%}%>
+            <%- include('partials/footer') -%>

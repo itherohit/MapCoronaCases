@@ -1,0 +1,76 @@
+<%- include('partials/header') -%>
+    <nav class="Nav-bar">
+        <div class="hamburger">
+            <div class="line black"></div>
+            <div class="line black"></div>
+            <div class="line black"></div>
+        </div>
+        <div class="nav-bar-logo">
+            <h5>MapCoronaCases</h5>
+        </div>
+        <ul class="nav-links nav-black">
+            <li><a href="/">World</a></li>
+            <li><a href="/india">India</a></li>
+            <li><a href="/covid19">Covid-19</a></li>
+            <li><a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/donate" target="blank">Donate</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Coffee?</a></li>
+        </ul>
+    </nav>
+    <div class="container covid-sec">
+        <div class="row">
+            <div class="col-lg-6 col-sm-12 covid-left-sec">
+                <div>
+                    <h1 class="covid-sec-header-about">Map Corona Cases</h1>
+                    <div class="covid-sec-info">
+                        <p>Map Corona cases gives real-time data about covid-19 cases around the world. It also visualizes the data for respected country on the google maps. It helps you to search for any countries and also provides information about the
+                            Indian states and visualizes them. All the informations are taken from the WHO and worldometers website. WHO twitter timeline is also embedded in the Covid-19 section.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-sm-12 covid-right-sec">
+                <img class="covid-sec-img" src="images/map.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <section class="animate__animated cases-info" id="transmission">
+        <div class="row">
+            <div class="col-lg-4 col-sm-12  symptom-col">
+                <h1><i class="fas fa-history"></i></h1>
+                <h3>
+                    Real Time Data
+                </h3>
+                <p>Thanks to the API's</p>
+            </div>
+            <div class="col-lg-4 col-sm-12 symptom-col">
+                <h1><i class="fas fa-map-marked-alt"></i></h1>
+                <h3>
+                    Visualized
+                </h3>
+                <p>Thanks to Google</p>
+            </div>
+            <div class="col-lg-4 col-sm-12 symptom-col">
+                <h1><i class="fas fa-heart"></i> </h1>
+                <h3>
+                    Easy To Use
+                </h3>
+                <p>Made with love</p>
+            </div>
+        </div>
+    </section>
+    <div class="container-fluid thanks-sec">
+        <h1>Thanks to all Frontline Workers</h1>
+        <img src="images/thanks.jpg" alt="" srcset="">
+    </div>
+    <div class="container-fluid thanks-sec developer-sec">
+        <h1>Developed By</h1>
+        <img src="images/developer.jpg" alt="" srcset="">
+        <h3>Rohit S</h3>
+        <h6>A Student Developer</h6>
+        <div class="social">
+            <p><a href="https://www.instagram.com/ro0hit_" target="blank"><i class="fab fa-instagram"></i></a></p>
+            <p><a href="https://www.linkedin.com/in/itherohit" target="blank"><i class="fab fa-linkedin"></i></a></p>
+        </div>
+    </div>
+    <%- include('partials/footer') -%>
