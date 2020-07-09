@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 * {
     padding: 0;
     margin: 0;
@@ -14,10 +15,43 @@ body {
 }
 
 #map {
-    position: absolute;
+    position: fixed;
     z-index: 10;
     width: 100%;
     height: 100%;
+}
+
+.mapboxgl-popup {
+    width: 240px
+}
+
+.mapboxgl-popup .popupheader {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.mapboxgl-popup .popupheader h3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin: auto 0;
+}
+
+.mapboxgl-popup .popupheader img {
+    margin: auto 5%;
+}
+
+.mapboxgl-popup .popupdata {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+    font-size: 1rem;
 }
 
 .marker {
@@ -97,7 +131,7 @@ font-family: 'Roboto', sans-serif; */
     top: 11%;
     width: 26vw;
     height: 80vh;
-    z-index: 999;
+    z-index: 20;
     background-color: transparent;
 }
 
@@ -159,7 +193,7 @@ font-family: 'Roboto', sans-serif; */
 
 .countries-section {
     width: 90%;
-    height: 93%;
+    height: 95%;
     overflow-y: scroll;
     border-radius: 25px;
     background-color: white;
@@ -289,14 +323,17 @@ nav {
     color: #0e1330;
     font-size: 6rem;
     margin-top: 7vh;
+    font-weight: bold;
     font-family: 'Montserrat', sans-serif;
 }
 
 .covid-sec-header-about {
-    color: #0e1330;
+    color: white;
     font-size: 4.5rem;
     margin-top: 7vh;
+    font-weight: bold;
     font-family: 'Montserrat', sans-serif;
+    text-align: center;
 }
 
 .covid-right-sec {
@@ -315,9 +352,16 @@ nav {
     text-align: left;
 }
 
+.covid-sec-info-about {
+    color: white;
+    text-align: center;
+    margin-top: 35px;
+    line-height: 30px;
+}
+
 .covid-sec-info p {
     font-size: 0.9em;
-    color: #6067c2;
+    color: #464ca3;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -333,13 +377,17 @@ nav {
     padding: 10px;
     text-decoration: none;
     border: none;
-    color: #0e1330;
+    color: white;
+    background-color: #0e1330;
+    border-radius: 10px;
 }
 
 .more-info a:hover {
     padding: 10x;
     text-decoration: none;
     border: none;
+    color: white;
+    background-color: #1d296e;
 }
 
 .symptoms {
@@ -362,6 +410,12 @@ nav {
     font-family: 'Montserrat', sans-serif;
     color: #0e1330;
     margin: 5vh 0;
+    transition: 0.3s;
+}
+
+.symptom-col:hover>.sympton-icon-header {
+    transition: 0.3s;
+    transform: scale(1.1);
 }
 
 .symptom-col img {
@@ -462,6 +516,40 @@ nav {
 
 .fa-linkedin:hover {
     color: blue;
+}
+
+.map-corona-sec {
+    background-image: url("../images/mapbg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+}
+
+.map-sec {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15vh;
+}
+
+.useful {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.useful-btn {
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    background-color: black;
 }
 
 @media screen and (max-width: 768px) {
@@ -582,12 +670,6 @@ nav {
         color: #c70039;
         font-family: 'Montserrat', sans-serif;
     }
-    .covid-sec-header-about {
-        color: #0e1330;
-        font-size: 3rem;
-        margin-top: 7vh;
-        font-family: 'Montserrat', sans-serif;
-    }
     .covid-sec-img {
         width: 90%;
         position: static;
@@ -619,6 +701,13 @@ nav {
         justify-content: center;
         font-size: 2rem;
     }
+    .covid-sec-header-about {
+        color: white;
+        font-size: 3rem;
+        font-weight: bold;
+        font-family: 'Montserrat', sans-serif;
+        text-align: center;
+    }
     .social p {
         margin: 10px;
     }
@@ -633,4 +722,23 @@ nav {
         height: 50%;
         border-radius: 50%;
     }
+    .map-sec {
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 1vh;
+    }
+    .map-corona-sec {
+        background-image: url("../images/mapbg.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: auto;
+        width: 100%;
+    }
+}
+
+.lessheight {
+    height: 0vh;
 }

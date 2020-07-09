@@ -28,7 +28,7 @@
                             infection by washing your hands or using an alcohol based rub frequently and not touching your face. </p>
                     </div>
                     <div class="more-info">
-                        <a href="https://www.who.int/health-topics/coronavirus#tab=tab_1" target="blank">More Info</a>
+                        <a href="https://www.who.int/health-topics/coronavirus#tab=tab_1" target="blank">Learn More</a>
                     </div>
                 </div>
             </div>
@@ -40,7 +40,7 @@
     <div class="symptoms">
         <h1>Symptoms</h1>
     </div>
-    <section class="animate__animated symptom" id="symptoms1">
+    <section class="animate__animated symptom" id="symptoms1" data-aos="fade-up">
         <div class="row">
             <div class="col-lg-4 col-sm-12  symptom-col">
                 <img src="images/cough.jpg" alt="">
@@ -56,7 +56,7 @@
             </div>
         </div>
     </section>
-    <section class="animate__animated symptom" id="symptoms2">
+    <section class="animate__animated symptom" id="symptoms2" data-aos="fade-up">
         <div class="row">
             <div class="col-lg-4 symptom-col">
                 <img src="images/nose.jpg" alt="">
@@ -76,7 +76,7 @@
         <h1>Preventions</h1>
     </div>
     <section class="animate__animated symptom" id="transmission">
-        <div class="row">
+        <div class="row " data-aos="fade-up">
             <div class="col-lg-4 col-sm-12  symptom-col">
                 <img src="images/wash.jpg" alt="">
                 <h3>Wash your Hands with Sanitizer</h3>
@@ -87,10 +87,10 @@
             </div>
             <div class="col-lg-4 col-sm-12 symptom-col">
                 <img src="images/mask.jpg" alt="">
-                <h3>Wear Mask if you are Sick</h3>
+                <h3>Wear Mask</h3>
             </div>
         </div>
-        <div class="row justify-content-center">
+        <div class="row justify-content-center" data-aos="fade-up">
             <div class="col-lg-4 col-sm-12  symptom-col">
                 <img src="images/sneeze.jpg" alt="">
                 <h3>Cover your Mouth while Sneezing</h3>
@@ -105,26 +105,26 @@
         <a class="twitter-timeline" data-width="400" data-height="600" href="https://twitter.com/WHO?ref_src=twsrc%5Etfw">Tweets by WHO</a>
         <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </section>
-    <section class="animate__animated cases-info" id="transmission">
+    <section class="animate__animated cases-info" id="transmission" data-aos="fade-up">
         <div class="row">
             <div class="col-lg-4 col-sm-12  symptom-col">
-                <h1><i class="fas fa-virus "></i></h1>
+                <h1 class="sympton-icon-header"><i class="fas fa-virus "></i></h1>
                 <h3>
                     <%= data.cases %>
                 </h3>
                 <p>Total Cases</p>
             </div>
             <div class="col-lg-4 col-sm-12 symptom-col">
-                <h1><i class="fas fa-heartbeat "></i></h1>
+                <h1 class="sympton-icon-header"> <i class="fas fa-heartbeat "></i></h1>
                 <h3>
-                    <%= data.deaths %>
+                    <%= data.recovered %>
                 </h3>
                 <p>Recoverd</p>
             </div>
             <div class="col-lg-4 col-sm-12 symptom-col">
-                <h1><i class="fas fa-skull "></i> </h1>
+                <h1 class="sympton-icon-header"><i class="fas fa-skull "></i></h1>
                 <h3>
-                    <%= data.recovered %>
+                    <%= data.deaths %>
                 </h3>
                 <p>Deaths</p>
             </div>
@@ -138,6 +138,6 @@
             <a href="https://www.worldometers.info/coronavirus/" target="blank">Worldometers.</a>
         </p>
     </div>
-    
+
 
     <%- include('partials/footer') -%>

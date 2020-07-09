@@ -1,14 +1,14 @@
 <%- include('partials/header') -%>
     <nav class="Nav-bar">
         <div class="hamburger">
-            <div class="line black"></div>
-            <div class="line black"></div>
-            <div class="line black"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
         </div>
         <div class="nav-bar-logo">
             <h5>MapCoronaCases</h5>
         </div>
-        <ul class="nav-links nav-black">
+        <ul class="nav-links about-link">
             <li><a href="/">World</a></li>
             <li><a href="/india">India</a></li>
             <li><a href="/covid19">Covid-19</a></li>
@@ -17,7 +17,7 @@
             <li><a href="#">Coffee?</a></li>
         </ul>
     </nav>
-    <div class="container covid-sec">
+    <!-- <div class="container covid-sec">
         <div class="row">
             <div class="col-lg-6 col-sm-12 covid-left-sec">
                 <div>
@@ -33,8 +33,25 @@
                 <img class="covid-sec-img" src="images/map.jpg" alt="">
             </div>
         </div>
+    </div> -->
+    <div class="container-fluid map-corona-sec">
+        <div class="row">
+            <div class="col-lg-12 col-sm-12 map-sec">
+                <div class="animate__animated container" data-aos="fade-up">
+                    <h1 class="covid-sec-header-about">Map Corona Cases</h1>
+                    <div class="covid-sec-info-about">
+                        <p>Map Corona cases gives real-time data about covid-19 cases around the world. It also visualizes the data for respected country on the map. It helps you to search your countries and also provides information about the Indian states
+                            and visualizes them. All the informations are taken from the WHO and worldometers website. WHO twitter timeline is also embedded in the Covid-19 section.
+                        </p>
+                    </div>
+                    <div class="useful">
+                        <button class="useful-btn">Was it Useful ?</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <section class="animate__animated cases-info" id="transmission">
+    <section class="animate__animated cases-info" id="transmission" data-aos="fade-up">
         <div class="row">
             <div class="col-lg-4 col-sm-12  symptom-col">
                 <h1><i class="fas fa-history"></i></h1>
@@ -48,7 +65,7 @@
                 <h3>
                     Visualized
                 </h3>
-                <p>Thanks to Google</p>
+                <p>Thanks to Mapbox</p>
             </div>
             <div class="col-lg-4 col-sm-12 symptom-col">
                 <h1><i class="fas fa-heart"></i> </h1>
@@ -59,7 +76,7 @@
             </div>
         </div>
     </section>
-    <div class="container-fluid thanks-sec">
+    <div class="container-fluid thanks-sec animate__animated" data-aos="fade-up">
         <h1>Thanks to all Frontline Workers</h1>
         <img src="images/thanks.jpg" alt="" srcset="">
     </div>

@@ -15,14 +15,14 @@ app.use(express.static("public"));
 var country = [{
         "name": "Indonesia",
         "code": "ID",
-        "latlng": [-1.003189,
-            101.972332
+        "latlng": [-1.503189,
+            120.972332
         ]
     },
     {
         "name": "UK",
         "code": "GB",
-        "latlng": [55.37, 3.436]
+        "latlng": [54.37, -2.436]
     },
     {
         "name": "Norway",
@@ -32,7 +32,7 @@ var country = [{
     {
         "name": "Iceland",
         "code": "IS",
-        "latlng": [64.9631, 19.0208]
+        "latlng": [64.9631, -19.0208]
     },
     {
         "name": "Bangladesh",
@@ -63,33 +63,33 @@ var country = [{
         "name": "North Macedonia",
         "code": "MK",
         "latlng": [
-            40.207257, -85.367965
+            41.6086, 21.7453
         ]
     },
     {
         "name": "Italy",
         "code": "IT",
         "latlng": [
-            42.622635, -77.305051
+            42.622635, 12.5674
         ]
     },
     {
         "name": "Chile",
         "code": "CL",
-        "latlng": [-38.165295, -72.288079]
+        "latlng": [-28.165295, -70.288079]
     },
     {
         "name": "Mexico",
         "code": "MX",
         "latlng": [
-            19.42847, -99.12766
+            21.42847, -101.12766
         ]
     },
     {
         "name": "Belgium",
         "code": "BE",
         "latlng": [
-            43.49972, -87.85037
+            50.5039, 4.4699
         ]
     },
     {
@@ -103,9 +103,7 @@ var country = [{
     {
         "name": "Brazil",
         "code": "BR",
-        "latlng": [
-            39.52365, -87.12502
-        ]
+        "latlng": [-10.2350, -51.9253]
     },
     {
         "name": "Belarus",
@@ -143,8 +141,8 @@ var country = [{
         "name": "Philippines",
         "code": "PH",
         "latlng": [
-            16.932122,
-            121.387948
+            15.932122,
+            120.387948
         ]
     },
     {
@@ -172,9 +170,7 @@ var country = [{
     {
         "name": "USA",
         "code": "US",
-        "latlng": [
-            30.697247, -88.182276
-        ]
+        "latlng": [38.0902, -96.7129]
     },
     {
         "name": "Morocco",
@@ -202,7 +198,7 @@ var country = [{
     {
         "name": "Argentina",
         "code": "AR",
-        "latlng": [-33.528049, -64.168459]
+        "latlng": [-36.528049, -64.168459]
     },
     {
         "name": "Bosnia and Herzegovina",
@@ -216,6 +212,11 @@ var country = [{
         "name": "Ecuador",
         "code": "EC",
         "latlng": [-1.241567, -78.322784]
+    },
+    {
+        "name": "Curaçao",
+        "code": "CW",
+        "latlng": [12.1696, -68.99]
     },
     {
         "name": "Poland",
@@ -237,7 +238,7 @@ var country = [{
         "name": "Russia",
         "code": "RU",
         "latlng": [
-            61.524, 105.318
+            61.524, 98.318
         ]
     },
     {
@@ -251,8 +252,8 @@ var country = [{
     {
         "name": "South Africa",
         "code": "ZA",
-        "latlng": [-31.3096,
-            18.357
+        "latlng": [-29.3096,
+            22.357
         ]
     },
     {
@@ -281,7 +282,7 @@ var country = [{
         "name": "Kazakhstan",
         "code": "KZ",
         "latlng": [
-            41.80665,
+            46.80665,
             67.98797
         ]
     },
@@ -289,7 +290,7 @@ var country = [{
         "name": "Haiti",
         "code": "HT",
         "latlng": [
-            19.251299, -72.294701
+            18.9712, -72.294701
         ]
     },
     {
@@ -329,14 +330,14 @@ var country = [{
         "code": "PK",
         "latlng": [
             28.49302,
-            70.5286
+            68.5286
         ]
     },
     {
         "name": "Canada",
         "code": "CA",
         "latlng": [
-            58.33747, -112.384858
+            55.33747, -110.384858
         ]
     },
     {
@@ -470,8 +471,8 @@ var country = [{
         "name": "Ukraine",
         "code": "UA",
         "latlng": [
-            49.219469,
-            33.023452
+            48.219469,
+            32.023452
         ]
     },
     {
@@ -525,22 +526,22 @@ var country = [{
         "name": "Nepal",
         "code": "NP",
         "latlng": [
-            27.15,
-            85.9
+            27.55,
+            84.9
         ]
     },
     {
         "name": "DRC",
         "code": "CD",
         "latlng": [
-            3.457396,
-            31.251364
+            2.857396,
+            27.251364
         ]
     },
     {
         "name": "Peru",
         "code": "PE",
-        "latlng": [-12.98078, -72.876651]
+        "latlng": [-10.98078, -75.876651]
     },
     {
         "name": "Sweden",
@@ -554,7 +555,7 @@ var country = [{
         "name": "Ivory Coast",
         "code": "CI",
         "latlng": [
-            41.099064, -75.393262
+            7.5400, -5.5471
         ]
     },
     {
@@ -575,7 +576,7 @@ var country = [{
     {
         "name": "Cabo Verde",
         "code": "CV",
-        "latlng": [-21.473204, -46.398482]
+        "latlng": [16.5388, -23.0418]
     },
     {
         "name": "Djibouti",
@@ -605,7 +606,7 @@ var country = [{
         "name": "Israel",
         "code": "IL",
         "latlng": [
-            39.611192, -84.75891
+            32.0461, 34.8516
         ]
     },
     {
@@ -620,7 +621,7 @@ var country = [{
         "name": "Sudan",
         "code": "SD",
         "latlng": [
-            16.34997,
+            15.34997,
             29.381307
         ]
     },
@@ -682,7 +683,7 @@ var country = [{
         "code": "KG",
         "latlng": [
             40.50763,
-            72.73004
+            73.73004
         ]
     },
     {
@@ -745,7 +746,7 @@ var country = [{
         "name": "Georgia",
         "code": "GE",
         "latlng": [
-            32.53951, -83.380775
+            42.53951, 43.380775
         ]
     },
     {
@@ -776,8 +777,8 @@ var country = [{
         "name": "Malaysia",
         "code": "MY",
         "latlng": [
-            2.521947,
-            113.833569
+            4.521947,
+            101.833569
         ]
     },
     {
@@ -814,7 +815,7 @@ var country = [{
     {
         "name": "Maldives",
         "code": "MV",
-        "latlng": [-0.614771,
+        "latlng": [3.202,
             73.093739
         ]
     },
@@ -897,7 +898,7 @@ var country = [{
         "name": "Georgia",
         "code": "GE",
         "latlng": [
-            32.53951, -83.380775
+            42.53951, 43.380775
         ]
     },
     {
@@ -911,7 +912,7 @@ var country = [{
         "name": "CAR",
         "code": "CF",
         "latlng": [
-            42.548882, -71.774121
+            6.6111, 20.9394
         ]
     },
     {
@@ -1036,7 +1037,7 @@ var country = [{
     {
         "name": "Paraguay",
         "code": "PY",
-        "latlng": [-21.686079, -60.13994]
+        "latlng": [-21.686079, -58.13994]
     },
     {
         "name": "Sao Tome and Principe",
@@ -1058,8 +1059,8 @@ var country = [{
         "name": "Syria",
         "code": "SY",
         "latlng": [
-            33.291544,
-            35.67857
+            34.891544,
+            38.967857
         ]
     },
     {
@@ -1095,7 +1096,7 @@ var country = [{
         "name": "Palestine",
         "code": "PS",
         "latlng": [
-            31.92157,
+            32.02157,
             35.20329
         ]
     },
@@ -1203,7 +1204,7 @@ var country = [{
         "name": "Greece",
         "code": "GR",
         "latlng": [
-            43.210723, -77.702643
+            39.0742, 21.8243
         ]
     },
     {
@@ -1216,8 +1217,8 @@ var country = [{
     {
         "name": "Mozambique",
         "code": "MZ",
-        "latlng": [-15.03417,
-            40.73583
+        "latlng": [-17.03417,
+            36.73583
         ]
     },
     {
@@ -1281,7 +1282,7 @@ var country = [{
         "name": "Zambia",
         "code": "ZM",
         "latlng": [-14.936526,
-            25.940824
+            26.940824
         ]
     },
     {
@@ -1296,7 +1297,7 @@ var country = [{
         "code": "CN",
         "latlng": [
             32.529718,
-            106.802874
+            103.802874
         ]
     },
     {
@@ -1331,8 +1332,8 @@ var country = [{
         "name": "Vietnam",
         "code": "VN",
         "latlng": [
-            21.732568,
-            105.396672
+            14.0732568,
+            108.396672
         ]
     },
     {
@@ -1412,7 +1413,7 @@ var country = [{
     {
         "name": "Papua New Guinea",
         "code": "PG",
-        "latlng": [6.3150, 143.9555]
+        "latlng": [-6.3150, 143.9555]
     },
     {
         "name": "Lesotho",
@@ -1425,28 +1426,28 @@ var country = [{
         "name": "St. Vincent Grenadines",
         "code": "VC",
         "latlng": [
-            45.189977, -93.384527
+            12.986235, -61.274929
         ]
     },
     {
         "name": "Senegal",
         "code": "SN",
-        "latlng": [14.4974, 14.4524]
+        "latlng": [14.4974, -14.4524]
     },
     {
         "name": "Caribbean Netherlands",
         "code": "BQ",
-        "latlng": [12.1784, 68.2385]
+        "latlng": [12.1784, -68.2385]
     },
     {
         "name": "Falkland Islands",
         "code": "FK",
-        "latlng": [51.7963, 59.5236]
+        "latlng": [-51.7963, -59.5236]
     },
     {
         "name": "Western Sahara",
         "code": "EH",
-        "latlng": [24.2155, 12.858]
+        "latlng": [24.2155, -12.858]
     },
     {
         "name": "St. Barth",
@@ -1472,7 +1473,7 @@ var country = [{
     {
         "name": "Anguilla",
         "code": "AI",
-        "latlng": [18.2206, 63.0686]
+        "latlng": [18.2206, -63.0686]
     },
     {
         "name": "Guadeloupe",
@@ -1502,8 +1503,8 @@ var country = [{
     {
         "name": "Myanmar",
         "code": "MM",
-        "latlng": [-7.538827,
-            112.237984
+        "latlng": [
+            21.9162, 95.9560
         ]
     },
     {
@@ -1515,8 +1516,7 @@ var country = [{
         "name": "Faeroe Islands",
         "code": "FO",
         "latlng": [
-            52.655626,
-            1.716132
+            61.655626, -6.9116132
         ]
     },
     {
@@ -1559,6 +1559,192 @@ var country = [{
     }
 ]
 
+
+var india = [{
+        "key": "AN",
+        "name": "Andaman and Nicobar Islands",
+        "latlng": [11.7401, 92.6586]
+    },
+    {
+        "key": "AP",
+        "name": "Andhra Pradesh",
+        "latlng": [15.9129, 79.740]
+    },
+    {
+        "key": "AR",
+        "name": "Arunachal Pradesh",
+        "latlng": [28.2180, 94.7278]
+    },
+    {
+        "key": "AS",
+        "name": "Assam",
+        "latlng": [26.2006, 92.9376]
+    },
+    {
+        "key": "BR",
+        "name": "Bihar",
+        "latlng": [25.0961, 85.3131]
+    },
+    {
+        "key": "CG",
+        "name": "Chandigarh",
+        "latlng": [30.7333, 76.7794]
+    },
+    {
+        "key": "CH",
+        "name": "Chhattisgarh",
+        "latlng": [21.2787, 81.8661]
+    },
+    {
+        "key": "DD",
+        "name": "Daman and Diu",
+        "latlng": [20.4283, 72.8397]
+    },
+    {
+        "key": "GA",
+        "name": "Goa",
+        "latlng": [15.2993, 74.1240]
+    },
+    {
+        "key": "GJ",
+        "name": "Gujarat",
+        "latlng": [22.2587, 71.1924]
+    },
+    {
+        "key": "HR",
+        "name": "Haryana",
+        "latlng": [29.0588, 76.0856]
+    },
+    {
+        "key": "HP",
+        "name": "Himachal Pradesh",
+        "latlng": [31.1048, 77.1734]
+    },
+    {
+        "key": "JK",
+        "name": "Jammu and Kashmir",
+        "latlng": [33.7782, 76.5762]
+    },
+    {
+        "key": "JH",
+        "name": "Jharkhand",
+        "latlng": [23.6102, 85.2799]
+    },
+    {
+        "key": "KA",
+        "name": "Karnataka",
+        "latlng": [15.3173, 75.7139]
+    },
+    {
+        "key": "KL",
+        "name": "Kerala",
+        "latlng": [10.8505, 76.2711]
+    },
+    {
+        "key": "LD",
+        "name": "Lakshadweep",
+        "latlng": [13.7000, 72.1833]
+    },
+    {
+        "key": "MP",
+        "name": "Madhya Pradesh",
+        "latlng": [22.9734, 78.6569]
+    },
+    {
+        "key": "MH",
+        "name": "Maharashtra",
+        "latlng": [19.66328, 75.30029]
+    },
+    {
+        "key": "MN",
+        "name": "Manipur",
+        "latlng": [24.6637, 93.9063]
+    },
+    {
+        "key": "ML",
+        "name": "Meghalaya",
+        "latlng": [25.4670, 91.3662]
+    },
+    {
+        "key": "MZ",
+        "name": "Mizoram",
+        "latlng": [23.1645, 92.9376]
+    },
+    {
+        "key": "NL",
+        "name": "Nagaland",
+        "latlng": [26.1584, 94.5624]
+    },
+    {
+        "key": "OR",
+        "name": "Odisha",
+        "latlng": [20.9517, 85.0985]
+    },
+    {
+        "key": "OR",
+        "name": "Dadra and Nagar Haveli",
+        "latlng": [20.1809, 73.0169]
+    },
+    {
+        "key": "PB",
+        "name": "Punjab",
+        "latlng": [31.1474, 75.3412]
+    },
+    {
+        "key": "RJ",
+        "name": "Rajasthan",
+        "latlng": [27.0238, 74.2179]
+    },
+    {
+        "key": "TN",
+        "name": "Tamil Nadu",
+        "latlng": [11.127123, 78.656891]
+    },
+    {
+        "key": "TN",
+        "name": "Delhi",
+        "latlng": [28.7041, 77.1025]
+    },
+    {
+        "key": "TS",
+        "name": "Telangana",
+        "latlng": [18.1124, 79.0193]
+    },
+    {
+        "key": "TR",
+        "name": "Tripura",
+        "latlng": [23.9408, 91.9882]
+    },
+    {
+        "key": "UK",
+        "name": "Uttar Pradesh",
+        "latlng": [26.8467, 80.9462]
+    },
+    {
+        "key": "UP",
+        "name": "Uttarakhand",
+        "latlng": [30.0668, 79.0193]
+    },
+    {
+        "key": "WB",
+        "name": "West Bengal",
+        "latlng": [22.9868, 87.8550]
+    },
+    {
+        "name": "Ladakh",
+        "latlng": [34.152588, 77.577049]
+    },
+    {
+        "name": "Puducherry",
+        "latlng": [11.9416, 79.8083]
+    },
+    {
+        "name": "Sikkim",
+        "latlng": [27.5330, 88.5122]
+    }
+]
+
+
 function fnum(x) {
     if (isNaN(x)) return x;
     if (x === null) return "N/A";
@@ -1591,6 +1777,8 @@ app.get("/", function(req, resp) {
         }
         let data_json = [];
         var geo_json = {
+            'center': [0, 0],
+            'zoom': 1,
             'type': 'FeatureCollection',
             'features': []
         };
@@ -1601,24 +1789,36 @@ app.get("/", function(req, resp) {
             for (var i = 0; i < country.length; i++) {
                 if (country[i].name == data.country) {
                     data.img = "https://www.countryflags.io/" + country[i].code + "/flat/64.png";
-                    data.lat = country[i].latlng[1];
-                    data.lng = country[i].latlng[0];
+                    data.latlng = [country[i].latlng[1], country[i].latlng[0]];
                     var geo = {
                         'type': 'Feature',
                         'geometry': {
                             'type': 'Point',
-                            'coordinates': [data.lat, data.lng]
+                            'coordinates': data.latlng
+                        },
+                        'properties': {
+                            'description': "<div class='popupheader'><img src=" + data.img + " width=40 height=40><h3>" + data.country + "</h3></div><div class='popupdata'><p>Cases Today </p><p>" + commaNumber(data.todayCases) + "</p></div><div class='popupdata'><p>Deaths Today</p><p>" + commaNumber(data.todayDeaths) + "</p></div><div class='popupdata'><p>Total Cases</p><p>" + commaNumber(data.cases) + "</p></div><div class='popupdata'><p>Recovered</p><p>" + commaNumber(data.recovered) + "</p></div><div class='popupdata'><p>Deaths </p><p>" + commaNumber(data.deaths) + "</p></div><div class='popupdata'><p>Active </p><p>" + commaNumber(data.active) + "</p></div><div class='popupdata'><p>Critical </p><p>" + commaNumber(data.critical) + "</p></div>"
                         }
                     }
-                    geo_json.features.push(geo);
                 }
                 if (!data.img) {
                     data.img = "https://mapcoronacases.s3-ap-northeast-1.amazonaws.com/globe.png";
+                    data.latlng = [0, 0];
+                    var geo = {
+                        'type': 'Feature',
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': data.latlng
+                        },
+                        'properties': {
+                            'description': "<div class='popupheader'><img src=" + data.img + " width=40 height=40><h3>" + data.country + "</h3></div><div class='popupdata'><p>Cases Today </p><p>" + commaNumber(data.todayCases) + "</p></div><div class='popupdata'><p>Deaths Today</p><p>" + commaNumber(data.todayDeaths) + "</p></div><div class='popupdata'><p>Total Cases</p><p>" + commaNumber(data.cases) + "</p></div><div class='popupdata'><p>Recovered</p><p>" + commaNumber(data.recovered) + "</p></div><div class='popupdata'><p>Deaths </p><p>" + commaNumber(data.deaths) + "</p></div><div class='popupdata'><p>Active </p><p>" + commaNumber(data.active) + "</p></div><div class='popupdata'><p>Critical </p><p>" + commaNumber(data.critical) + "</p></div>"
+                        }
+                    }
                 }
             }
+            geo_json.features.push(geo);
             data_json.push(data);
         });
-        console.log(JSON.stringify(geo_json));
         resp.render("index", { data_json: data_json, geo_json: JSON.stringify(geo_json) });
     });
 });
@@ -1626,6 +1826,15 @@ app.get("/", function(req, resp) {
 
 app.get("/india", function(req, resp) {
     let data_json = [];
+    var geo_json = {
+        'center': [
+            79.029432,
+            22.364293,
+        ],
+        'zoom': 3,
+        'type': 'FeatureCollection',
+        'features': []
+    };
     request('https://api.covidindiatracker.com/total.json', { json: true }, (err, res, body) => {
         if (err) {
             return console.log(err);
@@ -1634,7 +1843,22 @@ app.get("/india", function(req, resp) {
         body.fcases = fnum(body.confirmed);
         body.frecovered = fnum(body.recovered);
         body.fdeaths = fnum(body.deaths);
+        body.cases = body.confirmed;
+        body.recovered = body.recovered;
+        body.deaths = body.deaths;
         body.img = "https://mapcoronacases.s3-ap-northeast-1.amazonaws.com/indianflag.png";
+        body.latlng = [79.029432, 22.364293];
+        var geo = {
+            'type': 'Feature',
+            'geometry': {
+                'type': 'Point',
+                'coordinates': body.latlng
+            },
+            'properties': {
+                'description': "<div class='popupheader'><h3>" + body.country + "</h3></div><div class='popupdata'><p>Total Cases</p><p>" + commaNumber(body.cases) + "</p></div><div class='popupdata'><p>Recovered</p><p>" + commaNumber(body.recovered) + "</p></div><div class='popupdata'><p>Deaths </p><p>" + commaNumber(body.deaths) + "</p></div>"
+            }
+        }
+        geo_json.features.push(geo);
         data_json.push(body);
     });
     request('https://api.covidindiatracker.com/state_data.json', { json: true }, (err, res, body) => {
@@ -1642,14 +1866,48 @@ app.get("/india", function(req, resp) {
             return console.log(err);
         }
         body.forEach(data => {
-            data.country = data.state;
-            data.cases = fnum(data.confirmed);
-            data.recovered = fnum(data.recovered);
-            data.deaths = fnum(data.deaths);
-            data.img = "https://mapcoronacases.s3-ap-northeast-1.amazonaws.com/markermap.png";
-            data_json.push(data);
+            if (data.state != "Unknown*") {
+                data.country = data.state;
+                data.fcases = fnum(data.confirmed);
+                data.frecovered = fnum(data.recovered);
+                data.fdeaths = fnum(data.deaths);
+                data.cases = data.confirmed;
+                data.recovered = data.recovered;
+                data.deaths = data.deaths;
+                data.img = "https://mapcoronacases.s3-ap-northeast-1.amazonaws.com/markermap.png";
+                for (var i = 0; i < india.length; i++) {
+                    if (india[i].name == data.country) {
+                        data.latlng = [india[i].latlng[1], india[i].latlng[0]];
+                        var geo = {
+                            'type': 'Feature',
+                            'geometry': {
+                                'type': 'Point',
+                                'coordinates': data.latlng
+                            },
+                            'properties': {
+                                'description': "<div class='popupheader'><h3>" + data.country + "</h3></div><div class='popupdata'><p>Active Cases</p><p>" + commaNumber(data.active) + "</p></div></div><div class='popupdata'><p>Total Cases</p><p>" + commaNumber(data.cases) + "</p></div><div class='popupdata'><p>Recovered</p><p>" + commaNumber(data.recovered) + "</p></div><div class='popupdata'><p>Deaths </p><p>" + commaNumber(data.deaths) + "</p></div>"
+                            }
+                        }
+                    }
+                    if (!data.latlng) {
+                        data.latlng = [0, 0];
+                        var geo = {
+                            'type': 'Feature',
+                            'geometry': {
+                                'type': 'Point',
+                                'coordinates': data.latlng
+                            },
+                            'properties': {
+                                'description': "<div class='popupheader'><img src=" + data.img + " width=40 height=40><h3>" + data.country + "</h3></div><div class='popupdata'><p>Cases Today </p><p>" + commaNumber(data.todayCases) + "</p></div><div class='popupdata'><p>Deaths Today</p><p>" + commaNumber(data.todayDeaths) + "</p></div><div class='popupdata'><p>Total Cases</p><p>" + commaNumber(data.cases) + "</p></div><div class='popupdata'><p>Recovered</p><p>" + commaNumber(data.recovered) + "</p></div><div class='popupdata'><p>Deaths </p><p>" + commaNumber(data.deaths) + "</p></div><div class='popupdata'><p>Active </p><p>" + commaNumber(data.active) + "</p></div><div class='popupdata'><p>Critical </p><p>" + commaNumber(data.critical) + "</p></div>"
+                            }
+                        }
+                    }
+                }
+                geo_json.features.push(geo);
+                data_json.push(data);
+            }
         });
-        resp.render("index", { data_json: data_json });
+        resp.render("index", { data_json: data_json, geo_json: JSON.stringify(geo_json) });
     });
 })
 
@@ -1658,7 +1916,6 @@ app.get("/covid19", function(req, resp) {
         if (err) {
             resp.render("covid19");
         }
-        console.log(country[0].latlng);
         body.cases = commaNumber(body.cases);
         body.deaths = commaNumber(body.deaths);
         body.recovered = commaNumber(body.recovered);
