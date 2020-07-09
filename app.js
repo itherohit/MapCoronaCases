@@ -10,7 +10,7 @@ const app = express();
 app.set('view engine', 'ejs');
 
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static("public"));
+app.use(express.static("Public"));
 
 var country = [{
         "name": "Indonesia",
@@ -1885,7 +1885,7 @@ app.get("/india", function(req, resp) {
                                 'coordinates': data.latlng
                             },
                             'properties': {
-                                'description': "<div class='popupheader'><h3>" + data.country + "</h3></div><div class='popupdata'><p>Active Cases</p><p>" + commaNumber(data.active) + "</p></div></div><div class='popupdata'><p>Total Cases</p><p>" + commaNumber(data.cases) + "</p></div><div class='popupdata'><p>Recovered</p><p>" + commaNumber(data.recovered) + "</p></div><div class='popupdata'><p>Deaths </p><p>" + commaNumber(data.deaths) + "</p></div>"
+                                'description': "<div class='popupheader'><h3>" + data.country + "</h3></div><div class='popupdata'><p>Active Cases</p><p>" + commaNumber(data.active) + "</p></div></div><div class='popupdata'><p>Total Cases</p><p>" + commaNumber(data.cases) + "</p></div><div class='popupdata'><p>Recovered</p><p>" + commaNumber(data.recovered) + "</p></div><div class='popupdata'><p>Deaths </p><p>" + commaNumber(data.deaths) + "</p></div><div><a href=/india/" + data.state + ">District Data</a></div>"
                             }
                         }
                     }
@@ -1898,7 +1898,7 @@ app.get("/india", function(req, resp) {
                                 'coordinates': data.latlng
                             },
                             'properties': {
-                                'description': "<div class='popupheader'><img src=" + data.img + " width=40 height=40><h3>" + data.country + "</h3></div><div class='popupdata'><p>Cases Today </p><p>" + commaNumber(data.todayCases) + "</p></div><div class='popupdata'><p>Deaths Today</p><p>" + commaNumber(data.todayDeaths) + "</p></div><div class='popupdata'><p>Total Cases</p><p>" + commaNumber(data.cases) + "</p></div><div class='popupdata'><p>Recovered</p><p>" + commaNumber(data.recovered) + "</p></div><div class='popupdata'><p>Deaths </p><p>" + commaNumber(data.deaths) + "</p></div><div class='popupdata'><p>Active </p><p>" + commaNumber(data.active) + "</p></div><div class='popupdata'><p>Critical </p><p>" + commaNumber(data.critical) + "</p></div>"
+                                'description': "<div class='popupheader'><h3>" + data.country + "</h3></div><div class='popupdata'><p>Active Cases</p><p>" + commaNumber(data.active) + "</p></div></div><div class='popupdata'><p>Total Cases</p><p>" + commaNumber(data.cases) + "</p></div><div class='popupdata'><p>Recovered</p><p>" + commaNumber(data.recovered) + "</p></div><div class='popupdata'><p>Deaths </p><p>" + commaNumber(data.deaths) + "</p></div><div><a href=/india/" + data.state + " >District Data</a></div>"
                             }
                         }
                     }
@@ -1925,6 +1925,21 @@ app.get("/covid19", function(req, resp) {
 
 app.get("/about", function(req, res) {
     res.render("about");
+})
+
+app.get("/india/:state", function(req, resp) {
+    var state = req.params.state;
+    console.log(state);
+    request('https://api.covidindiatracker.com/state_data.json', { json: true }, (err, res, body) => {
+        if (err) {
+            return console.log(err);
+        }
+        body.forEach(data => {
+            if (_.toLower(state) === _.toLower(data.state)) {
+                resp.render("districts", { district_json: data.districtData });
+            }
+        });
+    });
 })
 
 app.listen(3000, function() {

@@ -109,7 +109,7 @@ font-family: 'Roboto', sans-serif; */
 }
 
 .nav-bg {
-    background-color: #333;
+    background-color: #090b08;
 }
 
 .nav-bar-logo {
@@ -550,6 +550,36 @@ nav {
     color: white;
     font-size: 1rem;
     background-color: black;
+}
+
+.district-sec {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/mapbg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.district-sec-info {
+    height: 80vh;
+    width: 70vh;
+    border-radius: 20px;
+    margin: 0 10px;
+    background-color: white;
+    padding: 25px;
+    overflow-y: scroll;
+}
+
+.district-data {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 @media screen and (max-width: 768px) {

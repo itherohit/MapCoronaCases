@@ -50,7 +50,6 @@
                                 <p><i class="fas fa-skull "></i> <span class="red "><%= data.fdeaths %></span></p>
                             </div>
                         </div>
-                        <hr class="btm-line ">
                     </div>
                     <% }); %>
             </div>
@@ -160,7 +159,10 @@
         //         .setLngLat([-75.06162, 43.282537])
         //         .addTo(map);
         // });
-
+        var popup = new mapboxgl.Popup({
+            closeButton: false,
+            closeOnClick: false
+        });
         map.on('load', function() {
             map.addImage('pulsing-dot', pulsingDot, {
                 pixelRatio: 2
@@ -178,10 +180,6 @@
                     'circle-color': '#B42222'
                 },
                 'filter': ['==', '$type', 'Point']
-            });
-            var popup = new mapboxgl.Popup({
-                closeButton: false,
-                closeOnClick: false
             });
 
             map.on('mouseenter', 'points', function(e) {
@@ -207,8 +205,13 @@
 
             map.on('mouseleave', 'points', function() {
                 map.getCanvas().style.cursor = '';
-                popup.remove();
             });
+
+            map.on('click', function() {
+                if (popup) {
+                    popup.remove();
+                }
+            })
         });
 
         let countryInfo = document.querySelectorAll('div .country-info');
@@ -241,6 +244,9 @@
                             'icon-image': 'pulsing-dot'
                         }
                     });
+                }
+                if (popup) {
+                    popup.remove();
                 }
                 jumpTo(geojson.features[i].geometry.coordinates);
                 console.log(geojson.features[i]);
