@@ -58,7 +58,7 @@
     <div id="map"></div>
     <script>
         var geojson = <%- geo_json %>;
-        mapboxgl.accessToken = 'pk.eyJ1IjoiaXRoZXJvaGl0IiwiYSI6ImNrYzllc2ZmZzFpNWQydHFwMXB0N3RtdjEifQ.H-Hd-UbdejRR_JxGReNzFQ';
+        mapboxgl.accessToken = config.API;
         var map = new mapboxgl.Map({
             container: 'map',
             zoom: geojson.zoom,

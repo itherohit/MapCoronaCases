@@ -1885,7 +1885,7 @@ app.get("/india", function(req, resp) {
                                 'coordinates': data.latlng
                             },
                             'properties': {
-                                'description': "<div class='popupheader'><h3>" + data.country + "</h3></div><div class='popupdata'><p>Active Cases</p><p>" + commaNumber(data.active) + "</p></div></div><div class='popupdata'><p>Total Cases</p><p>" + commaNumber(data.cases) + "</p></div><div class='popupdata'><p>Recovered</p><p>" + commaNumber(data.recovered) + "</p></div><div class='popupdata'><p>Deaths </p><p>" + commaNumber(data.deaths) + "</p></div><div><a href=/india/" + data.state + ">District Data</a></div>"
+                                'description': "<div class='popupheader'><h3>" + data.country + "</h3></div><div class='popupdata'><p>Active Cases</p><p>" + commaNumber(data.active) + "</p></div></div><div class='popupdata'><p>Total Cases</p><p>" + commaNumber(data.cases) + "</p></div><div class='popupdata'><p>Recovered</p><p>" + commaNumber(data.recovered) + "</p></div><div class='popupdata'><p>Deaths </p><p>" + commaNumber(data.deaths) + "</p></div><div><a href=/india/" + data.id + ">District Data</a></div>"
                             }
                         }
                     }
@@ -1898,7 +1898,7 @@ app.get("/india", function(req, resp) {
                                 'coordinates': data.latlng
                             },
                             'properties': {
-                                'description': "<div class='popupheader'><h3>" + data.country + "</h3></div><div class='popupdata'><p>Active Cases</p><p>" + commaNumber(data.active) + "</p></div></div><div class='popupdata'><p>Total Cases</p><p>" + commaNumber(data.cases) + "</p></div><div class='popupdata'><p>Recovered</p><p>" + commaNumber(data.recovered) + "</p></div><div class='popupdata'><p>Deaths </p><p>" + commaNumber(data.deaths) + "</p></div><div><a href=/india/" + data.state + " >District Data</a></div>"
+                                'description': "<div class='popupheader'><h3>" + data.country + "</h3></div><div class='popupdata'><p>Active Cases</p><p>" + commaNumber(data.active) + "</p></div></div><div class='popupdata'><p>Total Cases</p><p>" + commaNumber(data.cases) + "</p></div><div class='popupdata'><p>Recovered</p><p>" + commaNumber(data.recovered) + "</p></div><div class='popupdata'><p>Deaths </p><p>" + commaNumber(data.deaths) + "</p></div><div><a href=/india/" + data.id + " >District Data</a></div>"
                             }
                         }
                     }
@@ -1927,15 +1927,15 @@ app.get("/about", function(req, res) {
     res.render("about");
 })
 
-app.get("/india/:state", function(req, resp) {
-    var state = req.params.state;
+app.get("/india/:id", function(req, resp) {
+    var state = req.params.id;
     console.log(state);
     request('https://api.covidindiatracker.com/state_data.json', { json: true }, (err, res, body) => {
         if (err) {
             return console.log(err);
         }
         body.forEach(data => {
-            if (_.toLower(state) === _.toLower(data.state)) {
+            if (_.toLower(state) === _.toLower(data.id)) {
                 resp.render("districts", { district_json: data.districtData });
             }
         });
