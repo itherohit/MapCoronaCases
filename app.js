@@ -5,10 +5,12 @@ const _ = require("lodash");
 const request = require('request');
 const lookup = require('country-code-lookup');
 const commaNumber = require('comma-number');
+const path = require("path");
 const app = express();
 
+
 process.env.PWD = process.cwd();
-app.use(express.static(process.env.PWD + "/public"));
+app.use(express.static(path.join(process.env.PWD + '/public')));
 
 app.set('view engine', 'ejs');
 
