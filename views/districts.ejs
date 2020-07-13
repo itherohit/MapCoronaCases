@@ -19,14 +19,15 @@
     </nav>
     <div class="district-sec">
         <div class="district-sec-info">
+
             <% district_json.forEach(data => { %>
                 <div class="district-data">
-                    <h2>
+                    <h4>
                         <%= data.name %>
-                    </h2>
-                    <h6>
+                    </h4>
+                    <h4 class="district-data-num">
                         <%= data.confirmed %>
-                    </h6>
+                    </h4>
                 </div>
                 <% }); %>
         </div>

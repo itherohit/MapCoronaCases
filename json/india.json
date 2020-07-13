@@ -1,0 +1,183 @@
+[{
+        "key": "AN",
+        "name": "Andaman and Nicobar Islands",
+        "latlng": [11.7401, 92.6586]
+    },
+    {
+        "key": "AP",
+        "name": "Andhra Pradesh",
+        "latlng": [15.9129, 79.740]
+    },
+    {
+        "key": "AR",
+        "name": "Arunachal Pradesh",
+        "latlng": [28.2180, 94.7278]
+    },
+    {
+        "key": "AS",
+        "name": "Assam",
+        "latlng": [26.2006, 92.9376]
+    },
+    {
+        "key": "BR",
+        "name": "Bihar",
+        "latlng": [25.0961, 85.3131]
+    },
+    {
+        "key": "CG",
+        "name": "Chandigarh",
+        "latlng": [30.7333, 76.7794]
+    },
+    {
+        "key": "CH",
+        "name": "Chhattisgarh",
+        "latlng": [21.2787, 81.8661]
+    },
+    {
+        "key": "DD",
+        "name": "Daman and Diu",
+        "latlng": [20.4283, 72.8397]
+    },
+    {
+        "key": "GA",
+        "name": "Goa",
+        "latlng": [15.2993, 74.1240]
+    },
+    {
+        "key": "GJ",
+        "name": "Gujarat",
+        "latlng": [22.2587, 71.1924]
+    },
+    {
+        "key": "HR",
+        "name": "Haryana",
+        "latlng": [29.0588, 76.0856]
+    },
+    {
+        "key": "HP",
+        "name": "Himachal Pradesh",
+        "latlng": [31.1048, 77.1734]
+    },
+    {
+        "key": "JK",
+        "name": "Jammu and Kashmir",
+        "latlng": [33.7782, 76.5762]
+    },
+    {
+        "key": "JH",
+        "name": "Jharkhand",
+        "latlng": [23.6102, 85.2799]
+    },
+    {
+        "key": "KA",
+        "name": "Karnataka",
+        "latlng": [15.3173, 75.7139]
+    },
+    {
+        "key": "KL",
+        "name": "Kerala",
+        "latlng": [10.8505, 76.2711]
+    },
+    {
+        "key": "LD",
+        "name": "Lakshadweep",
+        "latlng": [13.7000, 72.1833]
+    },
+    {
+        "key": "MP",
+        "name": "Madhya Pradesh",
+        "latlng": [22.9734, 78.6569]
+    },
+    {
+        "key": "MH",
+        "name": "Maharashtra",
+        "latlng": [19.66328, 75.30029]
+    },
+    {
+        "key": "MN",
+        "name": "Manipur",
+        "latlng": [24.6637, 93.9063]
+    },
+    {
+        "key": "ML",
+        "name": "Meghalaya",
+        "latlng": [25.4670, 91.3662]
+    },
+    {
+        "key": "MZ",
+        "name": "Mizoram",
+        "latlng": [23.1645, 92.9376]
+    },
+    {
+        "key": "NL",
+        "name": "Nagaland",
+        "latlng": [26.1584, 94.5624]
+    },
+    {
+        "key": "OR",
+        "name": "Odisha",
+        "latlng": [20.9517, 85.0985]
+    },
+    {
+        "key": "OR",
+        "name": "Dadra and Nagar Haveli",
+        "latlng": [20.1809, 73.0169]
+    },
+    {
+        "key": "PB",
+        "name": "Punjab",
+        "latlng": [31.1474, 75.3412]
+    },
+    {
+        "key": "RJ",
+        "name": "Rajasthan",
+        "latlng": [27.0238, 74.2179]
+    },
+    {
+        "key": "TN",
+        "name": "Tamil Nadu",
+        "latlng": [11.127123, 78.656891]
+    },
+    {
+        "key": "TN",
+        "name": "Delhi",
+        "latlng": [28.7041, 77.1025]
+    },
+    {
+        "key": "TS",
+        "name": "Telangana",
+        "latlng": [18.1124, 79.0193]
+    },
+    {
+        "key": "TR",
+        "name": "Tripura",
+        "latlng": [23.9408, 91.9882]
+    },
+    {
+        "key": "UK",
+        "name": "Uttar Pradesh",
+        "latlng": [26.8467, 80.9462]
+    },
+    {
+        "key": "UP",
+        "name": "Uttarakhand",
+        "latlng": [30.0668, 79.0193]
+    },
+    {
+        "key": "WB",
+        "name": "West Bengal",
+        "latlng": [22.9868, 87.8550]
+    },
+    {
+        "name": "Ladakh",
+        "latlng": [34.152588, 77.577049]
+    },
+    {
+        "name": "Puducherry",
+        "latlng": [11.9416, 79.8083]
+    },
+    {
+        "name": "Sikkim",
+        "latlng": [27.5330, 88.5122]
+    }
+]

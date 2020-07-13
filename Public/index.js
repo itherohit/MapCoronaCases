@@ -86,5 +86,4 @@ window.onscroll = () => {
             }
         }
     }
-
 }
