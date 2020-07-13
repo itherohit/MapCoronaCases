@@ -8,10 +8,8 @@ const commaNumber = require('comma-number');
 const path = require("path");
 const app = express();
 
-
-process.env.PWD = process.cwd().replace(/\\/g, '/');
+process.env.PWD = process.cwd();
 app.use(express.static(process.env.PWD + '/public'));
-console.log(process.env.PWD + '/public');
 
 app.set('view engine', 'ejs');
 
