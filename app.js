@@ -7,10 +7,12 @@ const lookup = require('country-code-lookup');
 const commaNumber = require('comma-number');
 const app = express();
 
+process.env.PWD = process.cwd();
+app.use(express.static(process.env.PWD + "/public"));
+
 app.set('view engine', 'ejs');
 
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static(__dirname + "/public"));
 
 const india = require("./json/india.json");
 const country = require("./json/country.json");
