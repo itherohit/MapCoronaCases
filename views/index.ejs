@@ -171,6 +171,7 @@
                 'type': 'geojson',
                 'data': geojson
             });
+
             map.addLayer({
                 'id': 'points',
                 'type': 'circle',
@@ -207,7 +208,6 @@
                 map.getCanvas().style.cursor = '';
             });
             if (screen.width > 750) {
-                console.log("runnin");
                 map.on('click', function() {
                     if (popup) {
                         popup.remove();

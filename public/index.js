@@ -9,10 +9,17 @@ AOS.init({
 
 const search = document.querySelector("#searchInput");
 
+const dropBtn = document.querySelector("div.search-drop");
+const dropCountry = document.querySelector("div.countries-section");
+const searchSection = document.querySelector("div.search-section");
+
 if (search) {
     const countryInfo = document.querySelectorAll('div.country-info');
     const countryName = document.querySelectorAll('.country-name-header');
     search.addEventListener('input', (event) => {
+        dropCountry.classList.remove("animate__fadeOut");
+        dropCountry.classList.add("animate__fadeIn");
+        searchSection.classList.remove("lessheight");
         filter = event.target.value.toUpperCase();
         console.log(filter);
         for (i = 0; i < countryInfo.length; i++) {
@@ -26,10 +33,6 @@ if (search) {
     })
 }
 
-
-const dropBtn = document.querySelector("div.search-drop");
-const dropCountry = document.querySelector("div.countries-section");
-const searchSection = document.querySelector("div.search-section")
 
 if (dropBtn) {
     dropBtn.addEventListener('click', () => {

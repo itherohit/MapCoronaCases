@@ -1,9 +1,17 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 * {
     padding: 0;
     margin: 0;
     text-decoration: none;
     border: none;
+    -webkit-box-sizing: none;
     box-sizing: none;
     font-family: 'Montserrat', sans-serif;
 }
@@ -19,6 +27,7 @@ body {
     z-index: 10;
     width: 100%;
     height: 100%;
+    background-color: #090b08;
 }
 
 .mapboxgl-popup {
@@ -28,7 +37,11 @@ body {
 .mapboxgl-popup .popupheader {
     width: 100%;
     max-width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     text-align: center;
     margin-bottom: 10px;
@@ -47,8 +60,14 @@ body {
 .mapboxgl-popup .popupdata {
     width: 100%;
     max-width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     font-weight: 500;
     font-size: 1rem;
@@ -105,6 +124,8 @@ font-family: 'Roboto', sans-serif; */
     top: 0;
     width: 100%;
     z-index: 999;
+    -webkit-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out;
 }
 
@@ -115,8 +136,14 @@ font-family: 'Roboto', sans-serif; */
 .nav-bar-logo {
     position: absolute;
     height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: left;
+    -ms-flex-pack: left;
     justify-content: left;
     color: white;
     font-size: 2em;
@@ -136,20 +163,32 @@ font-family: 'Roboto', sans-serif; */
 }
 
 .search {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     width: 100%;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
     justify-content: space-evenly;
     padding-bottom: 3%;
 }
 
 .search-input {
     width: 80%;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     background-color: rgb(63, 63, 63);
     border-radius: 50px;
     padding: 3% 5%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -165,8 +204,14 @@ font-family: 'Roboto', sans-serif; */
 .search-drop {
     border-radius: 30px;
     background-color: rgb(63, 63, 63);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     font-size: 1.5rem;
     width: 40px;
@@ -193,11 +238,14 @@ font-family: 'Roboto', sans-serif; */
 
 .countries-section {
     width: 90%;
-    height: 95%;
+    height: auto;
+    max-height: 95%;
     overflow-y: scroll;
     border-radius: 25px;
     background-color: white;
     margin: 0 auto;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
     transition: 0.3s;
 }
 
@@ -206,8 +254,15 @@ font-family: 'Roboto', sans-serif; */
     max-width: 100%;
     height: 25%;
     margin: 2% auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
     justify-content: space-evenly;
     border-radius: 20px;
     position: relative;
@@ -227,6 +282,8 @@ font-family: 'Roboto', sans-serif; */
 
 .country-info:hover {
     background-color: rgb(196, 194, 194);
+    -webkit-transform: scaleX(1.03);
+    -ms-transform: scaleX(1.03);
     transform: scaleX(1.03);
 }
 
@@ -235,19 +292,31 @@ font-family: 'Roboto', sans-serif; */
 }
 
 .country-info-icon {
+    -webkit-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out;
 }
 
 .country-info-icon:hover {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
     transform: scale(1.1);
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
 
 .country-name {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     width: 100%;
     max-width: 100%;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: flex-start;
 }
 
@@ -264,8 +333,14 @@ font-family: 'Roboto', sans-serif; */
 
 .country-details {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
     justify-content: space-evenly;
     font-size: 1rem;
 }
@@ -276,11 +351,16 @@ nav {
 }
 
 .nav-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     list-style: none;
     width: 50%;
     height: 100%;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     margin-left: auto;
 }
@@ -289,6 +369,8 @@ nav {
     color: grey;
     text-decoration: none;
     font-size: 20px;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
     transition: 0.3s;
 }
 
@@ -302,19 +384,33 @@ nav {
     height: 70vh;
     width: 85%;
     margin: 10vh auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
 .covid-left-sec {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     width: 50%;
 }
 
 .twitter-sec {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     overflow: scroll;
 }
@@ -337,8 +433,14 @@ nav {
 }
 
 .covid-right-sec {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     width: 50%;
 }
@@ -367,8 +469,14 @@ nav {
 
 .more-info {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     font-family: 'Montserrat', sans-serif;
 }
@@ -396,6 +504,11 @@ nav {
     color: #0e1330;
 }
 
+.map-corona-sec .row {
+    height: 100vh;
+    width: 100%;
+}
+
 .symptoms h1 {
     font-size: 4rem;
     font-family: 'Montserrat', sans-serif;
@@ -410,11 +523,17 @@ nav {
     font-family: 'Montserrat', sans-serif;
     color: #0e1330;
     margin: 5vh 0;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
     transition: 0.3s;
 }
 
 .symptom-col:hover>.sympton-icon-header {
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
     transition: 0.3s;
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
     transform: scale(1.1);
 }
 
@@ -436,15 +555,27 @@ nav {
 }
 
 .donate-link {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     margin-bottom: 10vh;
 }
 
 .info-rights {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     margin-bottom: 5vh;
     font-family: 'Montserrat', sans-serif;
@@ -459,6 +590,8 @@ nav {
     background-color: #0e1330;
     color: white;
     border-radius: 10px;
+    -webkit-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
     transition: 0.2s ease-in-out;
 }
 
@@ -473,9 +606,18 @@ nav {
 }
 
 .thanks-sec {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     text-align: center;
 }
@@ -496,8 +638,14 @@ nav {
 }
 
 .social {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     font-size: 2rem;
 }
@@ -529,16 +677,27 @@ nav {
 
 .map-sec {
     color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
-    margin-top: 15vh;
 }
 
 .useful {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     margin: 30px 0;
 }
@@ -560,8 +719,14 @@ nav {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 }
 
@@ -577,8 +742,14 @@ nav {
 
 .district-data {
     padding: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
 }
 
@@ -620,8 +791,12 @@ nav {
         cursor: pointer;
         right: 5%;
         top: 5%;
+        -webkit-transform: translate(-5%, -50%);
+        -ms-transform: translate(-5%, -50%);
         transform: translate(-5%, -50%);
         z-index: 2;
+        -webkit-transition: 0.1s;
+        -o-transition: 0.1s;
         transition: 0.1s;
     }
     .nav-links {
@@ -629,10 +804,17 @@ nav {
         background: black;
         height: 100vh;
         width: 100%;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
+        -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
         justify-content: space-evenly;
         clip-path: circle(0px at 90% -10%);
         -webkit-clip-path: circle(0px at 90% -10%);
+        -webkit-transition: all 1s ease-out;
+        -o-transition: all 1s ease-out;
         transition: all 1s ease-out;
         pointer-events: none;
         color: white;
@@ -649,12 +831,18 @@ nav {
         font-size: 25px;
     }
     .nav-links li:nth-child(1) {
+        -webkit-transition: all 0.3s ease 0.1s;
+        -o-transition: all 0.3s ease 0.1s;
         transition: all 0.3s ease 0.1s;
     }
     .nav-links li:nth-child(2) {
+        -webkit-transition: all 0.3s ease 0.3s;
+        -o-transition: all 0.3s ease 0.3s;
         transition: all 0.3s ease 0.3s;
     }
     .nav-links li:nth-child(3) {
+        -webkit-transition: all 0.3s ease 0.5s;
+        -o-transition: all 0.3s ease 0.5s;
         transition: all 0.3s ease 0.5s;
     }
     .faded {
@@ -664,6 +852,8 @@ nav {
         color: grey;
         text-decoration: none;
         font-size: 20px;
+        -webkit-transition: 0.3s;
+        -o-transition: 0.3s;
         transition: 0.3s;
     }
     .nav-links li a:hover {
@@ -672,28 +862,42 @@ nav {
         font-size: 22px;
     }
     .covid-left-sec {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
         width: 100%;
     }
     .covid-sec-header {
         color: #0e1330;
         font-size: 4rem;
-        margin-top: 25vh;
+        margin-top: 20vh;
         font-family: 'Montserrat', sans-serif;
     }
     .covid-sec {
         height: 70vh;
         width: 85%;
-        margin: 10vh auto;
+        margin: 5vh auto;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
-        margin-top: 25vh;
-        margin-bottom: 40vh;
+        margin-top: 20vh;
+        margin-bottom: 35vh;
     }
     .covid-right-sec {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
         width: 100%;
     }
@@ -716,8 +920,14 @@ nav {
     .info-rights {
         width: 100%;
         text-align: center;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
         margin-bottom: 5vh;
         font-family: 'Montserrat', sans-serif;
@@ -730,8 +940,14 @@ nav {
         margin: 10px;
     }
     .social {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
         font-size: 2rem;
     }
@@ -758,18 +974,34 @@ nav {
     }
     .map-sec {
         color: white;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
-        margin-top: 1vh;
+        margin: auto;
+        width: 100%;
+    }
+    .map-corona-sec .row {
+        height: 100vh;
+        max-height: auto;
+        width: 100%;
     }
     .map-corona-sec {
         background-image: url("/mapbg.jpg");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        height: auto;
+        height: 100vh;
         width: 100%;
+        overflow-y: scroll;
+    }
+    .district-sec-info {
+        margin-top: 20px;
     }
 }
 
