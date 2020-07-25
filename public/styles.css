@@ -709,6 +709,26 @@ nav {
     color: white;
     font-size: 1rem;
     background-color: black;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+
+.useful-btn:hover {
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    background-color: black;
+    text-decoration: none;
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
 }
 
 .district-sec {
@@ -1007,4 +1027,48 @@ nav {
 
 .lessheight {
     height: 0vh;
+}
+
+.bmc-button img {
+    height: 34px !important;
+    width: 35px !important;
+    margin-bottom: 1px !important;
+    box-shadow: none !important;
+    border: none !important;
+    vertical-align: middle !important;
+}
+
+.bmc-button {
+    padding: 7px 15px 7px 10px !important;
+    line-height: 35px !important;
+    height: 51px !important;
+    text-decoration: none !important;
+    opacity: 0.85 !important;
+    color: #ffffff !important;
+    display: inline-flex !important;
+    background-color: #FF813F !important;
+    border-radius: 5px !important;
+    border: 1px solid transparent !important;
+    font-size: 20px !important;
+    letter-spacing: 0.6px !important;
+    margin: 0 auto !important;
+    font-family: 'Cookie', cursive !important;
+    -webkit-box-sizing: border-box !important;
+    box-sizing: border-box !important;
+    transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    -o-transform: scale(0.8);
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+
+.bmc-button:hover {
+    text-decoration: none !important;
+    color: #ffffff !important;
+    opacity: 1 !important;
 }
