@@ -6,11 +6,28 @@ const request = require('request');
 const lookup = require('country-code-lookup');
 const commaNumber = require('comma-number');
 const path = require("path");
+const helmet = require("helmet");
+const rateLimit = require("express-rate-limit");
 const app = express();
+// Enable if you're behind a reverse proxy (Heroku, Bluemix, AWS ELB, Nginx, etc)
+// see https://expressjs.com/en/guide/behind-proxies.html
+app.set('trust proxy', 1);
 
+const WorldLimiter = rateLimit({
+    windowMs: 12 * 60 * 60 * 1000, // 12 hour window
+    max: 20, // start blocking after 5 requests
+    message: "Too many requests from this IP, please try again after sometime."
+});
+
+const IndiaLimiter = rateLimit({
+    windowMs: 12 * 60 * 60 * 1000, // 12 hour window
+    max: 20, // start blocking after 5 requests
+    message: "Too many requests from this IP, please try again after sometime."
+});
 
 app.use(express.static('./public'));
 app.set('view engine', 'ejs');
+app.use(helmet());
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -43,10 +60,10 @@ function fnum(x) {
     return "1T+";
 }
 
-app.get("/", function(req, resp) {
+app.get("/", WorldLimiter, function(req, resp) {
     request('https://coronavirus-19-api.herokuapp.com/countries', { json: true }, (err, res, body) => {
         if (err) {
-            return console.log(err);
+            resp.render("error");
         }
         let data_json = [];
         var geo_json = {
@@ -97,7 +114,7 @@ app.get("/", function(req, resp) {
 });
 
 
-app.get("/india", function(req, resp) {
+app.get("/india", IndiaLimiter, function(req, resp) {
     let data_json = [];
     var geo_json = {
         'center': [
@@ -110,7 +127,7 @@ app.get("/india", function(req, resp) {
     };
     request('https://api.covidindiatracker.com/total.json', { json: true }, (err, res, body) => {
         if (err) {
-            return console.log(err);
+            resp.render("error");
         }
         body.country = "India";
         body.fcases = fnum(body.confirmed);
@@ -136,7 +153,7 @@ app.get("/india", function(req, resp) {
     });
     request('https://api.covidindiatracker.com/state_data.json', { json: true }, (err, res, body) => {
         if (err) {
-            return console.log(err);
+            resp.render("error");
         }
         body.forEach(data => {
             if (data.state != "Unknown*") {
@@ -187,7 +204,7 @@ app.get("/india", function(req, resp) {
 app.get("/covid19", function(req, resp) {
     request('https://coronavirus-19-api.herokuapp.com/all', { json: true }, (err, res, body) => {
         if (err) {
-            resp.render("covid19");
+            resp.render("error");
         }
         body.cases = commaNumber(body.cases);
         body.deaths = commaNumber(body.deaths);
@@ -205,7 +222,7 @@ app.get("/india/:id", function(req, resp) {
     console.log(state);
     request('https://api.covidindiatracker.com/state_data.json', { json: true }, (err, res, body) => {
         if (err) {
-            return console.log(err);
+            resp.render("error");
         }
         body.forEach(data => {
             if (_.toLower(state) === _.toLower(data.id)) {
