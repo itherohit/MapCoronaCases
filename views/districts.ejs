@@ -22,16 +22,16 @@
     <div class="district-sec">
         <div class="district-sec-info">
 
-            <% district_json.forEach(data => { %>
+            <% for(var key in district_json){ %>
                 <div class="district-data">
                     <h4>
-                        <%= data.name %>
+                        <%= key %>
                     </h4>
                     <h4 class="district-data-num">
-                        <%= data.confirmed %>
+                        <%= district_json[key].confirmed %>
                     </h4>
                 </div>
-                <% }); %>
+                <% } %>
         </div>
     </div>
     <%- include('partials/footer') -%>
