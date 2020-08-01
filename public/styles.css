@@ -788,8 +788,15 @@ nav {
     }
     .countries-section {
         width: 90%;
-        height: 95%;
         margin: 0 auto;
+        height: auto;
+        max-height: 95%;
+        overflow-y: scroll;
+        border-radius: 25px;
+        background-color: white;
+        -webkit-transition: 0.3s;
+        -o-transition: 0.3s;
+        transition: 0.3s;
     }
     #searchInput {
         font-size: 1.5rem;
