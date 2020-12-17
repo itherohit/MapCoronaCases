@@ -253,5 +253,5 @@ app.get("/india/:id", function(req, resp) {
 })
 
 app.listen(process.env.PORT || 3000, function() {
-    console.log("Server is Running !");
+    console.log("Server is Running!");
 });
