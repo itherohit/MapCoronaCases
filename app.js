@@ -92,7 +92,7 @@ app.get("/", WorldLimiter, function(req, resp) {
                     }
                 }
                 if (!data.img) {
-                    data.img = "https://mapcoronacases.s3-ap-northeast-1.amazonaws.com/globe.png";
+                    data.img = "https://i.pinimg.com/originals/64/a8/43/64a843dccd6224aff90dae50eb144d71.png";
                     data.latlng = [0, 0];
                     var geo = {
                         'type': 'Feature',
@@ -148,7 +148,7 @@ app.get("/india", IndiaLimiter, function(req, resp) {
             data.cases = body.total_values.confirmed;
             data.recovered = body.total_values.recovered;
             data.deaths = body.total_values.deaths;
-            data.img = "https://mapcoronacases.s3-ap-northeast-1.amazonaws.com/indianflag.png";
+            data.img = "https://www.countryflags.io/IN/flat/64.png";
             data.latlng = [79.029432, 22.364293];
             var geo = {
                 'type': 'Feature',
@@ -173,7 +173,7 @@ app.get("/india", IndiaLimiter, function(req, resp) {
                 statedata.cases = body.state_wise[key].confirmed;
                 statedata.recovered = body.state_wise[key].recovered;
                 statedata.deaths = body.state_wise[key].deaths;
-                statedata.img = "https://mapcoronacases.s3-ap-northeast-1.amazonaws.com/markermap.png";
+                statedata.img = "https://www.countryflags.io/IN/flat/64.png";
                 for (var i = 0; i < india.length; i++) {
                     if (india[i].name == statedata.country) {
                         statedata.latlng = [india[i].latlng[1], india[i].latlng[0]];
