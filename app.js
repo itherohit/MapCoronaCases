@@ -64,52 +64,54 @@ app.get("/", WorldLimiter, function(req, resp) {
     request('https://coronavirus-19-api.herokuapp.com/countries', { json: true }, (err, res, body) => {
         if (err) {
             resp.render("error");
-        }
-        let data_json = [];
-        var geo_json = {
-            'center': [0, 0],
-            'zoom': 1,
-            'type': 'FeatureCollection',
-            'features': []
-        };
-        body.forEach(data => {
-            data.fcases = fnum(data.cases);
-            data.frecovered = fnum(data.recovered);
-            data.fdeaths = fnum(data.deaths);
-            for (var i = 0; i < country.length; i++) {
-                if (country[i].name == data.country) {
-                    data.img = "https://www.countryflags.io/" + country[i].code + "/flat/64.png";
-                    data.latlng = [country[i].latlng[1], country[i].latlng[0]];
-                    var geo = {
-                        'type': 'Feature',
-                        'geometry': {
-                            'type': 'Point',
-                            'coordinates': data.latlng
-                        },
-                        'properties': {
-                            'description': "<div class='popupheader'><img src=" + data.img + " width=40 height=40><h3>" + data.country + "</h3></div><div class='popupdata'><p>Cases Today </p><p>" + commaNumber(data.todayCases) + "</p></div><div class='popupdata'><p>Deaths Today</p><p>" + commaNumber(data.todayDeaths) + "</p></div><div class='popupdata'><p>Total Cases</p><p>" + commaNumber(data.cases) + "</p></div><div class='popupdata'><p>Recovered</p><p>" + commaNumber(data.recovered) + "</p></div><div class='popupdata'><p>Deaths </p><p>" + commaNumber(data.deaths) + "</p></div><div class='popupdata'><p>Active </p><p>" + commaNumber(data.active) + "</p></div><div class='popupdata'><p>Critical </p><p>" + commaNumber(data.critical) + "</p></div>"
+
+        }else{
+            let data_json = [];
+            var geo_json = {
+                'center': [0, 0],
+                'zoom': 1,
+                'type': 'FeatureCollection',
+                'features': []
+            };
+            body.forEach(data => {
+                data.fcases = fnum(data.cases);
+                data.frecovered = fnum(data.recovered);
+                data.fdeaths = fnum(data.deaths);
+                for (var i = 0; i < country.length; i++) {
+                    if (country[i].name == data.country) {
+                        data.img = "https://www.countryflags.io/" + country[i].code + "/flat/64.png";
+                        data.latlng = [country[i].latlng[1], country[i].latlng[0]];
+                        var geo = {
+                            'type': 'Feature',
+                            'geometry': {
+                                'type': 'Point',
+                                'coordinates': data.latlng
+                            },
+                            'properties': {
+                                'description': "<div class='popupheader'><img src=" + data.img + " width=40 height=40><h3>" + data.country + "</h3></div><div class='popupdata'><p>Cases Today </p><p>" + commaNumber(data.todayCases) + "</p></div><div class='popupdata'><p>Deaths Today</p><p>" + commaNumber(data.todayDeaths) + "</p></div><div class='popupdata'><p>Total Cases</p><p>" + commaNumber(data.cases) + "</p></div><div class='popupdata'><p>Recovered</p><p>" + commaNumber(data.recovered) + "</p></div><div class='popupdata'><p>Deaths </p><p>" + commaNumber(data.deaths) + "</p></div><div class='popupdata'><p>Active </p><p>" + commaNumber(data.active) + "</p></div><div class='popupdata'><p>Critical </p><p>" + commaNumber(data.critical) + "</p></div>"
+                            }
+                        }
+                    }
+                    if (!data.img) {
+                        data.img = "https://i.pinimg.com/originals/64/a8/43/64a843dccd6224aff90dae50eb144d71.png";
+                        data.latlng = [0, 0];
+                        var geo = {
+                            'type': 'Feature',
+                            'geometry': {
+                                'type': 'Point',
+                                'coordinates': data.latlng
+                            },
+                            'properties': {
+                                'description': "<div class='popupheader'><img src=" + data.img + " width=40 height=40><h3>" + data.country + "</h3></div><div class='popupdata'><p>Cases Today </p><p>" + commaNumber(data.todayCases) + "</p></div><div class='popupdata'><p>Deaths Today</p><p>" + commaNumber(data.todayDeaths) + "</p></div><div class='popupdata'><p>Total Cases</p><p>" + commaNumber(data.cases) + "</p></div><div class='popupdata'><p>Recovered</p><p>" + commaNumber(data.recovered) + "</p></div><div class='popupdata'><p>Deaths </p><p>" + commaNumber(data.deaths) + "</p></div><div class='popupdata'><p>Active </p><p>" + commaNumber(data.active) + "</p></div><div class='popupdata'><p>Critical </p><p>" + commaNumber(data.critical) + "</p></div>"
+                            }
                         }
                     }
                 }
-                if (!data.img) {
-                    data.img = "https://i.pinimg.com/originals/64/a8/43/64a843dccd6224aff90dae50eb144d71.png";
-                    data.latlng = [0, 0];
-                    var geo = {
-                        'type': 'Feature',
-                        'geometry': {
-                            'type': 'Point',
-                            'coordinates': data.latlng
-                        },
-                        'properties': {
-                            'description': "<div class='popupheader'><img src=" + data.img + " width=40 height=40><h3>" + data.country + "</h3></div><div class='popupdata'><p>Cases Today </p><p>" + commaNumber(data.todayCases) + "</p></div><div class='popupdata'><p>Deaths Today</p><p>" + commaNumber(data.todayDeaths) + "</p></div><div class='popupdata'><p>Total Cases</p><p>" + commaNumber(data.cases) + "</p></div><div class='popupdata'><p>Recovered</p><p>" + commaNumber(data.recovered) + "</p></div><div class='popupdata'><p>Deaths </p><p>" + commaNumber(data.deaths) + "</p></div><div class='popupdata'><p>Active </p><p>" + commaNumber(data.active) + "</p></div><div class='popupdata'><p>Critical </p><p>" + commaNumber(data.critical) + "</p></div>"
-                        }
-                    }
-                }
+                geo_json.features.push(geo);
+                data_json.push(data);
+            });
+            resp.render("index", { data_json: data_json, geo_json: JSON.stringify(geo_json) });
             }
-            geo_json.features.push(geo);
-            data_json.push(data);
-        });
-        resp.render("index", { data_json: data_json, geo_json: JSON.stringify(geo_json) });
     });
 });
 
@@ -214,11 +216,12 @@ app.get("/covid19", function(req, resp) {
     request('https://coronavirus-19-api.herokuapp.com/all', { json: true }, (err, res, body) => {
         if (err) {
             resp.render("error");
+        }else{
+            body.cases = commaNumber(body.cases);
+            body.deaths = commaNumber(body.deaths);
+            body.recovered = commaNumber(body.recovered);
+            resp.render("covid19", { data: body });
         }
-        body.cases = commaNumber(body.cases);
-        body.deaths = commaNumber(body.deaths);
-        body.recovered = commaNumber(body.recovered);
-        resp.render("covid19", { data: body });
     });
 })
 
